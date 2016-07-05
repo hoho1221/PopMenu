@@ -17,6 +17,8 @@ let MenuItemAnimationInterval:Float = (MenuItemAnimationTime / 5)
 
 let MenuItemBaseTag = 100
 
+typealias Int2Void = (Int)->Void;
+
 class PopMenu: UIView, BlurViewProtocol{
     enum PopMenuAnimationType {
         case Rise;
@@ -34,6 +36,8 @@ class PopMenu: UIView, BlurViewProtocol{
     var startPoint:CGPoint!;
     var endPoint:CGPoint!;
     
+    var itemClicked:Int2Void?;
+    
     lazy var blurView:BlurView = {
         let blur = BlurView(frame: self.bounds);
         blur.hasTapGustureEnable = true;
@@ -43,8 +47,12 @@ class PopMenu: UIView, BlurViewProtocol{
         return blur;
     }();
     
-    init(frame:CGRect, item:Array<MenuItem>){
+    override init(frame: CGRect) {
         super.init(frame: frame);
+    }
+    
+     convenience init(frame:CGRect, item:Array<MenuItem>){
+        self.init(frame: frame);
         self.items = item;
     }
     
@@ -104,15 +112,16 @@ class PopMenu: UIView, BlurViewProtocol{
                 case .Rise:
                     fromRect.origin.y = self.startPoint.y;
                 case .Diffuse:
-                    fromRect.origin.x = CGRectGetMidX(self.bounds) - CGFloat(itemWidth/2.0);//self.startPoint.x - CGFloat(itemWidth/2.0);
-                    fromRect.origin.y = self.startPoint.y;
+                    fromRect.origin.x = CGRectGetMidX(self.bounds) - CGFloat(itemWidth/2.0);                    fromRect.origin.y = self.startPoint.y;
             }
             
             if menuButton == nil{
                 menuButton = MenuButton(frame: fromRect, menuItem: menuItem);
                 menuButton!.tag = MenuItemBaseTag + index;
                 
-                //TODO: 点击事件
+                menuButton?.itemClicked = { [unowned self] tag in
+                    self.itemClicked?(tag);
+                }
                 
                 self.addSubview(menuButton!);
                 
@@ -176,10 +185,14 @@ class PopMenu: UIView, BlurViewProtocol{
     }
 }
 
+
+
 class MenuButton: UIView{
     var iconImageView:UIImageView!;
     var titleLabel:UILabel!;
     var menuItem:MenuItem!;
+    
+    var itemClicked:Int2Void?;
     
     override init(frame: CGRect) {
         super.init(frame: frame);
@@ -219,5 +232,11 @@ class MenuButton: UIView{
         self.titleLabel.center = center;
         self.addSubview(self.titleLabel);
         
+        let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.itemClickedMethod));
+        self.addGestureRecognizer(gesture);
+    }
+    
+    func itemClickedMethod(){
+        self.itemClicked?(self.tag - MenuItemBaseTag);
     }
 }
