@@ -10,10 +10,13 @@
 		9656D14A1D2B349A00C9B50E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D1491D2B349A00C9B50E /* AppDelegate.swift */; };
 		9656D14C1D2B349A00C9B50E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D14B1D2B349A00C9B50E /* ViewController.swift */; };
 		9656D14F1D2B349A00C9B50E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9656D14D1D2B349A00C9B50E /* Main.storyboard */; };
-		9656D1511D2B349A00C9B50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9656D1501D2B349A00C9B50E /* Assets.xcassets */; };
 		9656D1541D2B349A00C9B50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9656D1521D2B349A00C9B50E /* LaunchScreen.storyboard */; };
 		9656D15F1D2B349A00C9B50E /* PopMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D15E1D2B349A00C9B50E /* PopMenuTests.swift */; };
 		9656D16A1D2B349A00C9B50E /* PopMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D1691D2B349A00C9B50E /* PopMenuUITests.swift */; };
+		9656D1781D2B34C200C9B50E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D1771D2B34C200C9B50E /* BlurView.swift */; };
+		9656D17C1D2B54B900C9B50E /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D17B1D2B54B900C9B50E /* MenuItem.swift */; };
+		9656D17E1D2B54CB00C9B50E /* PopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D17D1D2B54CB00C9B50E /* PopMenu.swift */; };
+		9656D1801D2BB57000C9B50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9656D17F1D2BB57000C9B50E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 		9656D1491D2B349A00C9B50E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9656D14B1D2B349A00C9B50E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9656D14E1D2B349A00C9B50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9656D1501D2B349A00C9B50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9656D1531D2B349A00C9B50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9656D1551D2B349A00C9B50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9656D15A1D2B349A00C9B50E /* PopMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,10 @@
 		9656D1651D2B349A00C9B50E /* PopMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9656D1691D2B349A00C9B50E /* PopMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopMenuUITests.swift; sourceTree = "<group>"; };
 		9656D16B1D2B349A00C9B50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9656D1771D2B34C200C9B50E /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		9656D17B1D2B54B900C9B50E /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		9656D17D1D2B54CB00C9B50E /* PopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopMenu.swift; sourceTree = "<group>"; };
+		9656D17F1D2BB57000C9B50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +103,15 @@
 		9656D1481D2B349A00C9B50E /* PopMenu */ = {
 			isa = PBXGroup;
 			children = (
+				9656D17F1D2BB57000C9B50E /* Assets.xcassets */,
 				9656D1491D2B349A00C9B50E /* AppDelegate.swift */,
 				9656D14B1D2B349A00C9B50E /* ViewController.swift */,
 				9656D14D1D2B349A00C9B50E /* Main.storyboard */,
-				9656D1501D2B349A00C9B50E /* Assets.xcassets */,
 				9656D1521D2B349A00C9B50E /* LaunchScreen.storyboard */,
 				9656D1551D2B349A00C9B50E /* Info.plist */,
+				9656D1771D2B34C200C9B50E /* BlurView.swift */,
+				9656D17B1D2B54B900C9B50E /* MenuItem.swift */,
+				9656D17D1D2B54CB00C9B50E /* PopMenu.swift */,
 			);
 			path = PopMenu;
 			sourceTree = "<group>";
@@ -230,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9656D1541D2B349A00C9B50E /* LaunchScreen.storyboard in Resources */,
-				9656D1511D2B349A00C9B50E /* Assets.xcassets in Resources */,
+				9656D1801D2BB57000C9B50E /* Assets.xcassets in Resources */,
 				9656D14F1D2B349A00C9B50E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9656D17E1D2B54CB00C9B50E /* PopMenu.swift in Sources */,
 				9656D14C1D2B349A00C9B50E /* ViewController.swift in Sources */,
+				9656D17C1D2B54B900C9B50E /* MenuItem.swift in Sources */,
 				9656D14A1D2B349A00C9B50E /* AppDelegate.swift in Sources */,
+				9656D1781D2B34C200C9B50E /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,8 +413,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PopMenu",
+				);
 				INFOPLIST_FILE = PopMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = win.changqi.PopMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,8 +430,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PopMenu",
+				);
 				INFOPLIST_FILE = PopMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = win.changqi.PopMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

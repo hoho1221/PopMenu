@@ -2,7 +2,7 @@
 //  PopMenuTests.swift
 //  PopMenuTests
 //
-//  Created by skyclass on 7/5/16.
+//  Created by changqi on 7/5/16.
 //  Copyright © 2016 company. All rights reserved.
 //
 
