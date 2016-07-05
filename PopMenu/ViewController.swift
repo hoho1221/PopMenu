@@ -61,9 +61,11 @@ class ViewController: UIViewController, BlurViewProtocol {
         let popMenu:PopMenu = PopMenu(frame: self.view.bounds, item: itemArray);
         popMenu.type = .Diffuse;
         
+        /*
         popMenu.itemClicked = { tag in
             print("the \(tag)'s item was clicked.");
         }
+         */
         
         popMenu.showMenuAtView(self.view);
     }
