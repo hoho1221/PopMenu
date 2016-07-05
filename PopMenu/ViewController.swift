@@ -24,7 +24,7 @@ class ViewController: UIViewController, BlurViewProtocol {
         button2.setTitleColor(UIColor.whiteColor(), forState: .Normal);
         
         self.view.addSubview(button1);
-        self.view .addSubview(button2);
+        self.view.addSubview(button2);
         
         button1.addTarget(self, action: #selector(self.buttonClicked1), forControlEvents: .TouchUpInside);
         button2.addTarget(self, action: #selector(self.buttonClicked2), forControlEvents: .TouchUpInside);
