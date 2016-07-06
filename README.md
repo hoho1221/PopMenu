@@ -1,4 +1,4 @@
-[![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://raw.githubusercontent.com/chisj/WSTabBarController/master/LICENSE)&nbsp;
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://raw.githubusercontent.com/MrCQ/PopMenu/master/LICENSE)&nbsp;
 [![Support](https://img.shields.io/badge/support-iOS%208%2B-blue.svg)](https://www.apple.com/nl/ios/)&nbsp;
 
 # PopMenu
