@@ -7,16 +7,66 @@
 //
 
 import UIKit
+import WSTabBarController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var maintabbarController : WSTabBarController?
+    var popMenu:PopMenu!;
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window!.backgroundColor = UIColor.whiteColor()
+        window!.makeKeyAndVisible()
+        
+        let itemArray:Array<MenuItem> = [MenuItem(title: "项目", iconName: "pop_Project", position: 0),
+                                         MenuItem(title: "任务", iconName: "pop_Task", position: 1),
+                                         MenuItem(title: "状态", iconName: "pop_Tweet", position: 2),
+                                         MenuItem(title: "好友", iconName: "pop_User", position: 3),
+                                         MenuItem(title: "私信", iconName: "pop_Message", position: 4),
+                                         MenuItem(title: "验证", iconName: "pop_2FA", position: 5),
+                                         ];
+        popMenu = PopMenu(frame: self.window!.bounds, item: itemArray);
+        popMenu.type = .Rise;
+                
+        popMenu.itemClicked = { tag in
+            print("the \(tag)'s item was clicked.");
+        }
+        
+        maintabbarController = WSTabBarController(publishButtonConfig: {b in
+            b.setImage(UIImage(named: "post_normal"), forState: .Normal)
+            b.setImage(UIImage(named: "post_normal"), forState: .Highlighted)
+            b.frame = CGRectMake(0, 0, 64, 77)
+            b.setTitle("publish", forState: .Normal)
+            b.contentVerticalAlignment = .Top
+            b.titleEdgeInsets = UIEdgeInsets(top: 60, left: -64, bottom: 0 , right: 0)
+            b.titleLabel?.font = UIFont.systemFontOfSize(11)
+            
+            b.setTitleColor(UIColor.blackColor(), forState: .Normal)
+            b.setTitleColor(UIColor.blackColor(), forState: .Highlighted)
+            }, publishButtonClick: { [unowned self] p in
+                self.popMenu.showMenuAtView(self.window!);
+        })
+        maintabbarController?.tabBar.translucent = false;
+        maintabbarController?.tabBar.tintColor =  UIColor.orangeColor()
+        maintabbarController?.viewControllers = [controller(title: "tab1", icon: "tabbar_main"),
+                                                 controller(title: "tab2", icon: "tabbar_main"),
+                                                 controller(title: "tab3", icon: "tabbar_mine"),
+                                                 controller(title: "tab4", icon: "tabbar_mine")
+        ]
+        window!.rootViewController = maintabbarController
         return true
+    }
+    
+    func controller(title title: String, icon: String) -> UINavigationController {
+        let c = UIViewController()
+        c.title = title
+        let controller = UINavigationController(rootViewController:c)
+        controller.tabBarItem.title = title
+        controller.tabBarItem.image = UIImage(named: icon)
+        return controller
     }
 
     func applicationWillResignActive(application: UIApplication) {

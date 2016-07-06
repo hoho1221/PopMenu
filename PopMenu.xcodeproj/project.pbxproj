@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9656D14A1D2B349A00C9B50E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D1491D2B349A00C9B50E /* AppDelegate.swift */; };
-		9656D14C1D2B349A00C9B50E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D14B1D2B349A00C9B50E /* ViewController.swift */; };
-		9656D14F1D2B349A00C9B50E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9656D14D1D2B349A00C9B50E /* Main.storyboard */; };
 		9656D1541D2B349A00C9B50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9656D1521D2B349A00C9B50E /* LaunchScreen.storyboard */; };
 		9656D15F1D2B349A00C9B50E /* PopMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D15E1D2B349A00C9B50E /* PopMenuTests.swift */; };
 		9656D16A1D2B349A00C9B50E /* PopMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D1691D2B349A00C9B50E /* PopMenuUITests.swift */; };
@@ -17,6 +15,11 @@
 		9656D17C1D2B54B900C9B50E /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D17B1D2B54B900C9B50E /* MenuItem.swift */; };
 		9656D17E1D2B54CB00C9B50E /* PopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656D17D1D2B54CB00C9B50E /* PopMenu.swift */; };
 		9656D1801D2BB57000C9B50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9656D17F1D2BB57000C9B50E /* Assets.xcassets */; };
+		96C2EE8D1D2C8CB900902CC4 /* WSTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 96C2EE8C1D2C8CB900902CC4 /* WSTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96C2EE911D2C8CB900902CC4 /* WSTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C2EE8A1D2C8CB900902CC4 /* WSTabBarController.framework */; };
+		96C2EE921D2C8CB900902CC4 /* WSTabBarController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96C2EE8A1D2C8CB900902CC4 /* WSTabBarController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		96C2EE981D2C8CCF00902CC4 /* WSTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2EE961D2C8CCF00902CC4 /* WSTabBar.swift */; };
+		96C2EE991D2C8CCF00902CC4 /* WSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C2EE971D2C8CCF00902CC4 /* WSTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,13 +37,32 @@
 			remoteGlobalIDString = 9656D1451D2B349A00C9B50E;
 			remoteInfo = PopMenu;
 		};
+		96C2EE8F1D2C8CB900902CC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9656D13E1D2B349A00C9B50E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96C2EE891D2C8CB900902CC4;
+			remoteInfo = WSTabBarController;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		96C2EE801D2C8C5600902CC4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				96C2EE921D2C8CB900902CC4 /* WSTabBarController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9656D1461D2B349A00C9B50E /* PopMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9656D1491D2B349A00C9B50E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9656D14B1D2B349A00C9B50E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9656D14E1D2B349A00C9B50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9656D1531D2B349A00C9B50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9656D1551D2B349A00C9B50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9656D15A1D2B349A00C9B50E /* PopMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +75,11 @@
 		9656D17B1D2B54B900C9B50E /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		9656D17D1D2B54CB00C9B50E /* PopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopMenu.swift; sourceTree = "<group>"; };
 		9656D17F1D2BB57000C9B50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96C2EE8A1D2C8CB900902CC4 /* WSTabBarController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WSTabBarController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C2EE8C1D2C8CB900902CC4 /* WSTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSTabBarController.h; sourceTree = "<group>"; };
+		96C2EE8E1D2C8CB900902CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96C2EE961D2C8CCF00902CC4 /* WSTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTabBar.swift; sourceTree = "<group>"; };
+		96C2EE971D2C8CCF00902CC4 /* WSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C2EE911D2C8CB900902CC4 /* WSTabBarController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +105,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96C2EE861D2C8CB900902CC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +121,7 @@
 				9656D1481D2B349A00C9B50E /* PopMenu */,
 				9656D15D1D2B349A00C9B50E /* PopMenuTests */,
 				9656D1681D2B349A00C9B50E /* PopMenuUITests */,
+				96C2EE8B1D2C8CB900902CC4 /* WSTabBarController */,
 				9656D1471D2B349A00C9B50E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +132,7 @@
 				9656D1461D2B349A00C9B50E /* PopMenu.app */,
 				9656D15A1D2B349A00C9B50E /* PopMenuTests.xctest */,
 				9656D1651D2B349A00C9B50E /* PopMenuUITests.xctest */,
+				96C2EE8A1D2C8CB900902CC4 /* WSTabBarController.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,8 +142,6 @@
 			children = (
 				9656D17F1D2BB57000C9B50E /* Assets.xcassets */,
 				9656D1491D2B349A00C9B50E /* AppDelegate.swift */,
-				9656D14B1D2B349A00C9B50E /* ViewController.swift */,
-				9656D14D1D2B349A00C9B50E /* Main.storyboard */,
 				9656D1521D2B349A00C9B50E /* LaunchScreen.storyboard */,
 				9656D1551D2B349A00C9B50E /* Info.plist */,
 				9656D1771D2B34C200C9B50E /* BlurView.swift */,
@@ -134,7 +169,29 @@
 			path = PopMenuUITests;
 			sourceTree = "<group>";
 		};
+		96C2EE8B1D2C8CB900902CC4 /* WSTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				96C2EE961D2C8CCF00902CC4 /* WSTabBar.swift */,
+				96C2EE971D2C8CCF00902CC4 /* WSTabBarController.swift */,
+				96C2EE8C1D2C8CB900902CC4 /* WSTabBarController.h */,
+				96C2EE8E1D2C8CB900902CC4 /* Info.plist */,
+			);
+			path = WSTabBarController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		96C2EE871D2C8CB900902CC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96C2EE8D1D2C8CB900902CC4 /* WSTabBarController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		9656D1451D2B349A00C9B50E /* PopMenu */ = {
@@ -144,10 +201,12 @@
 				9656D1421D2B349A00C9B50E /* Sources */,
 				9656D1431D2B349A00C9B50E /* Frameworks */,
 				9656D1441D2B349A00C9B50E /* Resources */,
+				96C2EE801D2C8C5600902CC4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				96C2EE901D2C8CB900902CC4 /* PBXTargetDependency */,
 			);
 			name = PopMenu;
 			productName = PopMenu;
@@ -190,6 +249,24 @@
 			productReference = 9656D1651D2B349A00C9B50E /* PopMenuUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		96C2EE891D2C8CB900902CC4 /* WSTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96C2EE931D2C8CB900902CC4 /* Build configuration list for PBXNativeTarget "WSTabBarController" */;
+			buildPhases = (
+				96C2EE851D2C8CB900902CC4 /* Sources */,
+				96C2EE861D2C8CB900902CC4 /* Frameworks */,
+				96C2EE871D2C8CB900902CC4 /* Headers */,
+				96C2EE881D2C8CB900902CC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WSTabBarController;
+			productName = WSTabBarController;
+			productReference = 96C2EE8A1D2C8CB900902CC4 /* WSTabBarController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,6 +288,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 9656D1451D2B349A00C9B50E;
 					};
+					96C2EE891D2C8CB900902CC4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 9656D1411D2B349A00C9B50E /* Build configuration list for PBXProject "PopMenu" */;
@@ -229,6 +309,7 @@
 				9656D1451D2B349A00C9B50E /* PopMenu */,
 				9656D1591D2B349A00C9B50E /* PopMenuTests */,
 				9656D1641D2B349A00C9B50E /* PopMenuUITests */,
+				96C2EE891D2C8CB900902CC4 /* WSTabBarController */,
 			);
 		};
 /* End PBXProject section */
@@ -240,7 +321,6 @@
 			files = (
 				9656D1541D2B349A00C9B50E /* LaunchScreen.storyboard in Resources */,
 				9656D1801D2BB57000C9B50E /* Assets.xcassets in Resources */,
-				9656D14F1D2B349A00C9B50E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +338,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96C2EE881D2C8CB900902CC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,7 +353,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9656D17E1D2B54CB00C9B50E /* PopMenu.swift in Sources */,
-				9656D14C1D2B349A00C9B50E /* ViewController.swift in Sources */,
 				9656D17C1D2B54B900C9B50E /* MenuItem.swift in Sources */,
 				9656D14A1D2B349A00C9B50E /* AppDelegate.swift in Sources */,
 				9656D1781D2B34C200C9B50E /* BlurView.swift in Sources */,
@@ -289,6 +375,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96C2EE851D2C8CB900902CC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96C2EE981D2C8CCF00902CC4 /* WSTabBar.swift in Sources */,
+				96C2EE991D2C8CCF00902CC4 /* WSTabBarController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -302,17 +397,14 @@
 			target = 9656D1451D2B349A00C9B50E /* PopMenu */;
 			targetProxy = 9656D1661D2B349A00C9B50E /* PBXContainerItemProxy */;
 		};
+		96C2EE901D2C8CB900902CC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96C2EE891D2C8CB900902CC4 /* WSTabBarController */;
+			targetProxy = 96C2EE8F1D2C8CB900902CC4 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9656D14D1D2B349A00C9B50E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9656D14E1D2B349A00C9B50E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9656D1521D2B349A00C9B50E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -413,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PopMenu",
@@ -430,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PopMenu",
@@ -489,6 +583,49 @@
 			};
 			name = Release;
 		};
+		96C2EE941D2C8CB900902CC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WSTabBarController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = win.changqi.WSTabBarController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		96C2EE951D2C8CB900902CC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WSTabBarController/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = win.changqi.WSTabBarController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -508,6 +645,7 @@
 				9656D1701D2B349A00C9B50E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9656D1711D2B349A00C9B50E /* Build configuration list for PBXNativeTarget "PopMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -516,12 +654,22 @@
 				9656D1731D2B349A00C9B50E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9656D1741D2B349A00C9B50E /* Build configuration list for PBXNativeTarget "PopMenuUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9656D1751D2B349A00C9B50E /* Debug */,
 				9656D1761D2B349A00C9B50E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96C2EE931D2C8CB900902CC4 /* Build configuration list for PBXNativeTarget "WSTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96C2EE941D2C8CB900902CC4 /* Debug */,
+				96C2EE951D2C8CB900902CC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
