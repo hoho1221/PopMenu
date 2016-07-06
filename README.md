@@ -17,8 +17,8 @@ A animated PopMenu for the iOS app in Swift.
 
 ## Installation
 ### Manually
-1. Download and drop /popmenu in your project.
-2. finish!
+1. Download and drop the whole folder popmenu/ into your project.
+2. finish !
 
 ## Usage
 
