@@ -15,7 +15,9 @@ A animated PopMenu for the iOS app in Swift.
 - Swift 2.2
 
 ## Installation
-
+### Manually
+1. Download and drop /popmenu in your project.
+2. finish!
 
 ## Usage
 
@@ -23,8 +25,8 @@ A animated PopMenu for the iOS app in Swift.
 let popMenu = PopMenu(frame: self.window!.bounds, item: itemArray);
 popMenu.type = .Diffuse;
                 
-popMenu.itemClicked = { tag in
-    print("the \(tag)'s item was clicked.");
+popMenu.itemClicked = { index in
+    print("the \(index)'s item was clicked.");
 }
 
 popMenu.showMenuAtView(self.window!);
