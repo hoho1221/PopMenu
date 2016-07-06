@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                          MenuItem(title: "验证", iconName: "pop_2FA", position: 5),
                                          ];
         popMenu = PopMenu(frame: self.window!.bounds, item: itemArray);
-        popMenu.type = .Rise;
+        popMenu.type = .Diffuse;
                 
         popMenu.itemClicked = { tag in
             print("the \(tag)'s item was clicked.");
