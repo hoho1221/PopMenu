@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         popMenu = PopMenu(frame: self.window!.bounds, item: itemArray);
         popMenu.type = .Diffuse;
                 
-        popMenu.itemClicked = { tag in
-            print("the \(tag)'s item was clicked.");
+        popMenu.itemClicked = { index in
+            print("the \(index)'s item was clicked.");
         }
         
         maintabbarController = WSTabBarController(publishButtonConfig: {b in
