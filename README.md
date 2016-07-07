@@ -1,5 +1,6 @@
-[![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://raw.githubusercontent.com/chisj/WSTabBarController/master/LICENSE)&nbsp;
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://raw.githubusercontent.com/MrCQ/PopMenu/master/LICENSE)&nbsp;
 [![Support](https://img.shields.io/badge/support-iOS%208%2B-blue.svg)](https://www.apple.com/nl/ios/)&nbsp;
+[![Swift 2.2](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
 # PopMenu
 A animated PopMenu for the iOS app in Swift.
@@ -16,8 +17,8 @@ A animated PopMenu for the iOS app in Swift.
 
 ## Installation
 ### Manually
-1. Download and drop /popmenu in your project.
-2. finish!
+1. Download and drop the whole folder popmenu/ into your project.
+2. finish !
 
 ## Usage
 
