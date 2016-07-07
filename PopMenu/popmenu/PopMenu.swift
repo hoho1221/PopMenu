@@ -93,6 +93,10 @@ class PopMenu: UIView, BlurViewProtocol{
         self.removeFromSuperview();
     }
     
+    
+    /**
+     show the items with animation
+     */
     func showItems(){
         let itemWidth:Float = (Float(self.bounds.size.width) - (Float(self.perRowItemCount + 1) * MenuItemHorizontalMargin)) / Float(perRowItemCount);
         
@@ -112,7 +116,8 @@ class PopMenu: UIView, BlurViewProtocol{
                 case .Rise:
                     fromRect.origin.y = self.startPoint.y;
                 case .Diffuse:
-                    fromRect.origin.x = CGRectGetMidX(self.bounds) - CGFloat(itemWidth/2.0);                    fromRect.origin.y = self.startPoint.y;
+                    fromRect.origin.x = CGRectGetMidX(self.bounds) - CGFloat(itemWidth/2.0);
+                    fromRect.origin.y = self.startPoint.y;
             }
             
             if menuButton == nil{
@@ -171,6 +176,14 @@ class PopMenu: UIView, BlurViewProtocol{
         };
     }
     
+    /**
+     get the frame to show items.
+     
+     - parameter index:     item index
+     - parameter itemWidth: item width
+     
+     - returns: frame
+     */
     func getFrameOfItem(AtIndex index:Int, itemWidth:Float) -> CGRect {
         //var perColumItemCount = Int(self.items.count/self.perRowItemCount) + (self.items.count%self.perRowItemCount > 0 ? 1 : 0);
         

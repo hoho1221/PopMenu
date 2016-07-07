@@ -17,9 +17,13 @@ import UIKit
 
 class BlurView: UIView{
     enum BlurType{
+        //white translucent background like UIToolbar
         case BlurTypeTranslucent;
+        //black translucent background like UIToolbar
         case BlurTypeTranslucentWhite;
+        //black translucent background, Default.
         case BlurTypeTranslucentBlack;
+        //white background
         case BlurTypeWhite
     };
     
@@ -32,6 +36,7 @@ class BlurView: UIView{
     
     weak var delegate:BlurViewProtocol?;
     
+    //if the tap gesture is enabled.
     var hasTapGustureEnable:Bool{
         set(newValue){
             self.guestureEnable = newValue;
@@ -94,10 +99,15 @@ class BlurView: UIView{
         self.showAnimationAtContinerView(currentView);
     }
     
+    //method to dismiss the blur view.
     func dismiss(){
         self.hiddenAnimation();
     }
     
+    /**
+     show blur view at specified container view with animation.
+     - parameter containerView: superView of the blur view
+     */
     func showAnimationAtContinerView(containerView:UIView){
         if(self.showed){
             self.dismiss();
@@ -119,6 +129,9 @@ class BlurView: UIView{
         };
     }
     
+    /**
+     hide the blur view with animation.
+     */
     func hiddenAnimation(){
         self.delegate?.willDismissBlurView?();
         
@@ -132,6 +145,7 @@ class BlurView: UIView{
         };
     }
     
+    //if the super view of current blur view is changed, this method will be called.
     override func willMoveToSuperview(newSuperview: UIView?) {
         if(newSuperview != nil){
             let backgroundView = self.backgroundView;

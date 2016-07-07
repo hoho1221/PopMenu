@@ -12,21 +12,12 @@ import UIKit
 class MenuItem: NSObject{
     var title:String!;
     var iconImage:UIImage!;
-    var glowColor:UIColor?;
     var position:NSInteger!;
     
-    init(title:String, iconName:String, glowColor:UIColor, position:NSInteger) {
-        self.title = title;
-        self.iconImage = UIImage(named: iconName);
-        self.glowColor = glowColor;
-        self.position = position;
-    }
-    
     init(title:String, iconName:String, position:NSInteger) {
+        super.init();
         self.title = title;
         self.iconImage = UIImage(named: iconName);
         self.position = position;
-        
-        self.glowColor = nil;
     }
 }
